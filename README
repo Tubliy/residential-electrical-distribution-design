@@ -1,1 +1,102 @@
+# Residential AC Electrical Distribution System Analysis
 
+## Overview
+This project models and analyzes a simplified 120 V RMS residential electrical distribution system using AutoCAD, PSpice, and MATLAB. The system represents typical household branch circuits (living room, bedroom, kitchen, and lighting) as equivalent resistive loads connected in parallel.
+
+The objective was to study voltage distribution, branch currents, and power consumption while validating simulation results with analytical calculations.
+
+---
+
+## System Description
+- Source: 120 V RMS, 60 Hz AC supply
+- Configuration: Parallel branch circuits
+- Loads modeled as equivalent resistances:
+
+| Branch        | Resistance (Ω) | Current (A RMS) |
+|--------------|---------------|----------------|
+| Living Room  | 28.8          | 4.17           |
+| Bedroom      | 36            | 3.33           |
+| Kitchen      | 11.08         | 10.83          |
+| Lighting     | 48            | 2.50           |
+
+Total Load Current ≈ 20.83 A
+
+---
+
+## Tools Used
+- **AutoCAD** – Electrical layout design
+- **PSpice** – Circuit simulation (Transient Analysis)
+- **MATLAB** – Analytical calculations and waveform validation
+
+---
+
+## PSpice Simulation
+A transient simulation was performed using a sinusoidal voltage source:
+
+- Peak Voltage: 170 V (equivalent to 120 V RMS)
+- Frequency: 60 Hz
+
+### Key Observations:
+- Voltage and current waveforms are sinusoidal
+- No phase shift between voltage and current (purely resistive loads)
+- Current magnitude varies based on branch resistance
+
+---
+
+## MATLAB Analysis
+MATLAB was used to compute:
+
+- Branch currents using Ohm’s Law:  
+  I = V / R
+- Power consumption:  
+  P = V² / R
+- Total system current and power
+
+### Example Results:
+- Kitchen Load: ~10.83 A
+- Total Power ≈ 2500 W
+
+These results closely match PSpice simulation outputs.
+
+---
+
+## Key Concepts Demonstrated
+- AC circuit analysis (RMS vs peak voltage)
+- Parallel load distribution
+- Ohm’s Law in AC systems
+- Transient simulation of sinusoidal signals
+- Power calculation in resistive networks
+
+---
+
+## Results
+The system behaves as expected for a residential resistive load model:
+
+- All branches receive the same voltage (parallel configuration)
+- Currents scale inversely with resistance
+- Voltage and current remain in phase
+
+---
+
+## Conclusion
+This project demonstrates a complete workflow for electrical system analysis:
+
+1. Physical layout design (AutoCAD)
+2. Circuit simulation (PSpice)
+3. Analytical validation (MATLAB)
+
+The results confirm accurate modeling of a residential AC distribution system and reinforce fundamental power system concepts.
+
+---
+
+## Future Improvements
+- Add reactive components (inductance/capacitance)
+- Model real appliances instead of resistive loads
+- Include breaker sizing and protection analysis
+- Expand to multi-phase systems
+
+---
+
+## Author
+Christian Calvo  
+Electrical & Computer Engineering
